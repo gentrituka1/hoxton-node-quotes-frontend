@@ -25,7 +25,7 @@ function App() {
           <li>
             <div className='quote-text'>
               <h4>"{quote.quote}"</h4>
-              <h2>{quote.author}</h2>
+              <h2>- {quote.author}</h2>
             </div>
           </li>
           )}
