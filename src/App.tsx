@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <ul className="quote-list">
+      <ul>
         <h1>Quotes</h1>
         {quotes.map((quote) => (
           <li key={quote.id}>
