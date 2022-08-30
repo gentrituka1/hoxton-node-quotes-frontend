@@ -1,0 +1,22 @@
+.App {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.App ul{
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+.App ul li{
+  border: 3px solid green;
+}
+.App ul li h2{
+  color: royalblue;
+}
+.App ul li h4{
+  color: crimson;
+}
+
