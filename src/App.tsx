@@ -6,7 +6,12 @@ import Quotes from "./pages/Quotes";
 export type Quote = {
   id: number;
   quote: string;
-  author: string;
+  author: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    image: string;
+}
 };
 
 function App() {
@@ -21,7 +26,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
-            <Route path="/" element={<Quotes quotes={quotes} />} />
+            <Route index element={<div>There are no quotes here. Check the /quotes endpoint!</div>} />
             <Route path="/quotes" element={<Quotes quotes={quotes} />} />
         </Routes>
     </div>
