@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Quotes from "./pages/Quotes";
 
 export type Quote = {
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
-            <Route index element={<div>There are no quotes here. Check the /quotes endpoint!</div>} />
+            <Route index element={<Navigate to="/quotes"/>} />
             <Route path="/quotes" element={<Quotes quotes={quotes} />} />
         </Routes>
     </div>
