@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Quotes from "./pages/Quotes";
 
-type Quote = {
+export type Quote = {
   id: number;
   quote: string;
   author: string;
@@ -19,15 +21,10 @@ function App() {
 
   return (
     <div className="App">
-      <ul>
-        <h1>Quotes</h1>
-        {quotes.map((quote) => (
-          <li key={quote.id}>
-            <h4>"{quote.quote}"</h4>
-            <h2>- {quote.author}</h2>
-          </li>
-        ))}
-      </ul>
+        <Routes>
+            <Route path="/" element={<Quotes quotes={quotes} />} />
+            <Route path="/quotes" element={<Quotes quotes={quotes} />} />
+        </Routes>
     </div>
   );
 }
